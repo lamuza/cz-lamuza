@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "components/layout"
 import Image from "components/image"
@@ -8,13 +7,9 @@ import SEO from "components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Image />
+    <h1 className={"text-4xl my-4 px-2 font-bold"}>Jazyky srdcem - Language by heart</h1>
+    <p className={"text-lg px-2 my-2"}>PŘEKLADY – TLUMOČENÍ – VÝUKA</p>
   </Layout>
 )
 
