@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `LAMUZA - Bc. Šárka Bendová, MSc.`,
     description: `Překlady, tlumočení, výuka jazyků`,
+    siteURL: `https://lamuza.cz`,
+    socialSites: {
+      facebook: `https://www.facebook.com/jazykysrdcem`
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,7 +31,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-extract-schema`,
     `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
