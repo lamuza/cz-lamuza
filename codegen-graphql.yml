@@ -1,4 +1,4 @@
-schema: "schema.graphql"
+schema: "schema.json"
 documents:
   - ./src/**/*.{ts,tsx}
   - ./node_modules/gatsby-*/**/*.js

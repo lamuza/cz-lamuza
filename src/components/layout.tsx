@@ -6,9 +6,9 @@
  */
 
 import React, { Fragment } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "components/header"
+import { Header } from "components/header"
 import "typeface-ibm-plex-sans"
 import "typeface-roboto"
 import styled from "styled-components"
@@ -19,23 +19,24 @@ type Props = {
   children: React.ReactNode
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+export const Layout: React.FC<Props> = ({ children }) => {
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <Fragment>
       <GlobalStyle />
       <Container>
-        <Header siteTitle={data.site.siteMetadata.title} />
         <Content>{children}</Content>
+        <Header />
+        <Footer />
         {/*<footer className={"flex flex-col items-center p-2"}>*/}
         {/*  <p>*/}
         {/*    telefon:{" "}*/}
@@ -51,13 +52,10 @@ const Layout: React.FC<Props> = ({ children }) => {
         {/*  </p>*/}
         {/*  <p className={"p-2"}>Hlinecká 1558/3, České Budějovice, 37306</p>*/}
         {/*</footer>*/}
-        <Footer />
       </Container>
     </Fragment>
   )
 }
-
-export default Layout
 
 /**
  * Styled components
@@ -67,8 +65,8 @@ const Container = styled("div")`
   display: grid;
   position: relative;
   grid-template-columns: 1fr;
-  grid-template-rows: max-content auto max-content;
-  grid-template-areas: "header" "content" "footer";
+  grid-template-rows: auto max-content;
+  grid-template-areas: "content" "footer";
   width: 100%;
   min-height: 100vh;
 `
@@ -78,6 +76,9 @@ const Content = styled("main")`
   position: relative;
   flex-direction: column;
   width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
   height: 100%;
+  padding: 100px 20px 0 20px;
   grid-area: content;
 `
