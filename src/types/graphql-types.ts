@@ -2394,6 +2394,20 @@ export type FooterLogoQuery = { __typename?: "Query" } & {
   >
 }
 
+export type HeaderLogoQueryVariables = {}
+
+export type HeaderLogoQuery = { __typename?: "Query" } & {
+  placeholderImage: Maybe<
+    { __typename?: "File" } & {
+      childImageSharp: Maybe<
+        { __typename?: "ImageSharp" } & {
+          fluid: Maybe<{ __typename?: "ImageSharpFluid" } & GatsbyImageSharpFluid_TracedSvgFragment>
+        }
+      >
+    }
+  >
+}
+
 export type ImageQueryVariables = {}
 
 export type ImageQuery = { __typename?: "Query" } & {
@@ -2404,16 +2418,6 @@ export type ImageQuery = { __typename?: "Query" } & {
           fluid: Maybe<{ __typename?: "ImageSharpFluid" } & GatsbyImageSharpFluidFragment>
         }
       >
-    }
-  >
-}
-
-export type SiteTitleQueryQueryVariables = {}
-
-export type SiteTitleQueryQuery = { __typename?: "Query" } & {
-  site: Maybe<
-    { __typename?: "Site" } & {
-      siteMetadata: Maybe<{ __typename?: "SiteSiteMetadata" } & Pick<SiteSiteMetadata, "title">>
     }
   >
 }
