@@ -1,38 +1,31 @@
+import { Logo } from "components/logo"
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { HeaderLogoQuery } from "types/graphql-types"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import Img, { FluidObject } from "gatsby-image"
+import { Navigation } from "../navigation"
+import { NavigationLink } from "../navigation-link"
+
+export const HEADER_HEIGHT = 80
 
 type Props = {
   children?: never
 }
 
-export const Header = (_: Props) => {
-  const data: HeaderLogoQuery = useStaticQuery(graphql`
-    query HeaderLogo {
-      placeholderImage: file(relativePath: { eq: "lamuza.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `)
-
-  const fluidImage = data?.placeholderImage?.childImageSharp?.fluid
-
-  return (
-    <Container>
-      <Wrapper>
-        <Link to={"/"}>
-          <Logo fluid={fluidImage as FluidObject} alt={"logo"} />
-        </Link>
-      </Wrapper>
-    </Container>
-  )
-}
+export const Header = (_: Props) => (
+  <Container>
+    <Wrapper>
+      <Link to={"/"}>
+        <Logo height={"40px"} />
+      </Link>
+      <Navigation>
+        <NavigationLink to={"/"}>{`Úvod`}</NavigationLink>
+        <NavigationLink to={"/sluzby"}>{`Služby`}</NavigationLink>
+        <NavigationLink to={"/ceny"}>{`Ceny`}</NavigationLink>
+        <NavigationLink to={"/o-nas"}>{`O nás`}</NavigationLink>
+      </Navigation>
+    </Wrapper>
+  </Container>
+)
 
 /**
  * Styled components
@@ -44,8 +37,9 @@ const Container = styled("header")`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: ${HEADER_HEIGHT}px;
   background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 `
 
 const Wrapper = styled("div")`
@@ -58,10 +52,4 @@ const Wrapper = styled("div")`
   height: 100%;
   max-width: 1024px;
   padding: 0 20px;
-  border-bottom: 1px solid #000;
-`
-
-const Logo = styled(Img)`
-  position: relative;
-  width: 220px;
 `
