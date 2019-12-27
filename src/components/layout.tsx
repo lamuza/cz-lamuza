@@ -9,8 +9,6 @@ import React, { Fragment } from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 
 import { Header } from "components/header"
-import "typeface-ibm-plex-sans"
-import "typeface-roboto"
 import styled from "styled-components"
 import { GlobalStyle } from "./global-style"
 import { Footer } from "components/footer"
