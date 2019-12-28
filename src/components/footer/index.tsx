@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Copyright } from "components/footer/copyright"
 import { SocialLinks } from "components/footer/social-links"
+import { theme } from "theme"
 
 type Props = {}
 
@@ -27,7 +28,7 @@ const Container = styled("footer")`
   align-items: center;
   padding: 40px 0;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: ${theme.colors.white};
 `
 
 const Wrapper = styled("div")`
