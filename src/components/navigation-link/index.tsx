@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
   font-family: ${theme.font.family.secondary};
   font-weight: normal;
   font-size: 18px;
-  color: ${theme.colors.black};
+  color: ${theme.colors.secondary};
   text-decoration: none;
   text-transform: uppercase;
 

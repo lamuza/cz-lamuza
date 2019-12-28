@@ -40,7 +40,7 @@ const Container = styled("header")`
   width: 100%;
   height: ${HEADER_HEIGHT}px;
   background-color: ${theme.colors.white};
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 4px ${theme.colors.shadow};
 `
 
 const Wrapper = styled("div")`
