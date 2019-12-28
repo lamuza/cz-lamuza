@@ -11,8 +11,8 @@ export const theme = {
   colors: colors,
   font: {
     family: {
-      primary: `"Roboto", sans-serif`,
-      secondary: `"IBM Plex Sans", sans-serif`,
+      primary: `'Roboto', sans-serif`,
+      secondary: `'IBM Plex Sans', sans-serif`,
     },
   },
 }
