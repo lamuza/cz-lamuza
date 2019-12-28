@@ -5,6 +5,7 @@ const colors = {
   black: "#000000",
   white: "#FFFFFF",
   facebook: "#3b5998",
+  shadow: "rgba(87, 65, 66, 0.25)",
 }
 
 export const theme = {
