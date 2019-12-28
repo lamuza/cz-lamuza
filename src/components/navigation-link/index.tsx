@@ -9,23 +9,33 @@ type Props = {
 }
 
 export const NavigationLink = ({ children, to }: Props) => {
-  return <Container to={to}>{children}</Container>
+  return (
+    <StyledLink
+      to={to}
+      getProps={({ isCurrent }) => {
+        return isCurrent ? { style: { textDecoration: "underline" } } : {}
+      }}
+    >
+      {children}
+    </StyledLink>
+  )
 }
 
 /**
  * Styled components
  */
 
-const Container = styled(Link)`
+const StyledLink = styled(Link)`
   position: relative;
   font-family: ${theme.font.family.secondary};
   font-weight: normal;
   font-size: 18px;
-  color: black;
+  color: ${theme.colors.black};
   text-decoration: none;
   text-transform: uppercase;
 
   &:hover {
+    color: ${theme.colors.primary};
     text-decoration: underline;
   }
 `
