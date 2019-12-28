@@ -21,7 +21,7 @@ export const Copyright = (_: Props) => {
         {`© ${currentYear} Lamuza | `}
         <AnchorLink
           href={
-            "https://www.rzp.cz/cgi-bin/aps_cacheWEB.sh?VSS_SERV=ZVWSBJFND&OKRES=&CASTOBCE=&OBEC=&ULICE=&CDOM=&COR=&COZ=&ICO=&OBCHJM=&OBCHJMATD=0&ROLES=P&JMENO=%B9%E1rka&PRIJMENI=Bendov%E1&NAROZENI=&ROLE=&VYPIS=1&PODLE=osoba&Action=List&IDOSOBY=21e9662eda926277f506"
+            "https://www.rzp.cz/cgi-bin/aps_cacheWEB.sh?VSS_SERV=ZVWSBJVYP&OKRES=&CASTOBCE=&OBEC=&ULICE=&CDOM=&COR=&COZ=&ICO=&OBCHJM=&OBCHJMATD=0&ROLES=P&JMENO=%B9%E1rka&PRIJMENI=Bendov%E1&NAROZENI=&ROLE=&VYPIS=1&PODLE=osoba&IDOSOBY=46e4f37ed7ef897b99ca&PRESVYBER=1&IDICO=4fedf070dee99068&HISTORIE=0"
           }
           title={"Bc. Šárka Bendová, MSc - Živnostenský rejstřík"}
         >{`Bc. Šárka Bendová, MSc.`}</AnchorLink>
