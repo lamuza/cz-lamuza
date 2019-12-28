@@ -1,8 +1,7 @@
+import { Logo } from "components/logo"
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import Img, { FluidObject } from "gatsby-image"
-import { FooterLogoQuery } from "types/graphql-types"
 import { theme } from "theme"
 
 type Props = {
@@ -11,26 +10,13 @@ type Props = {
 
 export const Copyright = (_: Props) => {
   const currentYear = new Date().getFullYear()
-  const data: FooterLogoQuery = useStaticQuery(graphql`
-    query FooterLogo {
-      placeholderImage: file(relativePath: { eq: "lamuza.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `)
-
-  const fluidImage = data?.placeholderImage?.childImageSharp?.fluid
 
   return (
     <Container>
       <Link to={"/"}>
-        <Logo fluid={fluidImage as FluidObject} alt={"logo"} />
+        <Logo height={"16px"} width={"auto"} />
       </Link>
-      <Motto>jazyky srdcem</Motto>
+      <Motto>{`překlady | tlumočení | výuka`}</Motto>
       <CopyrightText>
         {`© ${currentYear} Lamuza | `}
         <AnchorLink
@@ -52,19 +38,15 @@ const Container = styled("div")`
   display: flex;
   position: relative;
   flex-direction: column;
+  align-items: flex-start;
   grid-area: copyright;
-`
-
-const Logo = styled(Img)`
-  position: relative;
-  width: 120px;
 `
 
 const Motto = styled("span")`
   position: relative;
   font-size: 14px;
   font-weight: 300;
-  color: gray;
+  color: ${theme.colors.secondary};
   margin-top: 5px;
 `
 
@@ -72,7 +54,7 @@ const CopyrightText = styled("span")`
   position: relative;
   font-size: 12px;
   font-weight: 300;
-  color: black;
+  color: ${theme.colors.primary};
   margin-top: 10px;
 `
 
