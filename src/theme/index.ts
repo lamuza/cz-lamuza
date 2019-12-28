@@ -1,7 +1,9 @@
 const colors = {
-  primary: '#8C2035',
-  secondary: '#574142',
-  tertiary: '#BFA5A6',
+  primary: "#8C2035",
+  secondary: "#574142",
+  tertiary: "#BFA5A6",
+  black: "#000000",
+  white: "#FFFFFF",
 }
 
 export const theme = {
@@ -10,6 +12,6 @@ export const theme = {
     family: {
       primary: `"Roboto", sans-serif`,
       secondary: `"IBM Plex Sans", sans-serif`,
-    }
-  }
+    },
+  },
 }

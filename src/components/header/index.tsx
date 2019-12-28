@@ -2,6 +2,7 @@ import { Logo } from "components/logo"
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
+import { theme } from "theme"
 import { Navigation } from "../navigation"
 import { NavigationLink } from "../navigation-link"
 
@@ -38,7 +39,7 @@ const Container = styled("header")`
   align-items: center;
   width: 100%;
   height: ${HEADER_HEIGHT}px;
-  background-color: white;
+  background-color: ${theme.colors.white};
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 `
 
