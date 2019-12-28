@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { theme } from "theme"
 
 type Props = {
   children?: never
@@ -40,13 +41,18 @@ const Container = styled("div")`
 `
 
 const Svg = styled("svg")`
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  height: 40px;
+  width: 40px;
   fill-rule: evenodd;
   clip-rule: evenodd;
   stroke-linejoin: round;
   stroke-miterlimit: 2;
 
   path {
-    fill: gray;
+    fill: ${theme.colors.secondary};
     fill-rule: nonzero;
     transition: fill 250ms ease-in-out;
   }
@@ -57,13 +63,12 @@ const AnchorLink = styled("a")`
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  transform: translate3d(8px, -8px, 0);
+  width: 24px;
+  height: 24px;
 
   &:hover ${Svg} {
     path {
-      fill: #3b5998;
+      fill: ${theme.colors.facebook};
     }
   }
 `
