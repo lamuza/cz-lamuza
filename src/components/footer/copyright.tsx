@@ -45,7 +45,6 @@ const Container = styled("div")`
 const Motto = styled("span")`
   position: relative;
   font-size: 14px;
-  font-weight: 300;
   color: ${theme.colors.secondary};
   margin-top: 5px;
 `
@@ -53,7 +52,6 @@ const Motto = styled("span")`
 const CopyrightText = styled("span")`
   position: relative;
   font-size: 12px;
-  font-weight: 300;
   color: ${theme.colors.primary};
   margin-top: 10px;
 `
@@ -61,4 +59,9 @@ const CopyrightText = styled("span")`
 const AnchorLink = styled("a")`
   position: relative;
   color: ${theme.colors.primary};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
