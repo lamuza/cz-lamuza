@@ -9,7 +9,7 @@ export default () => (
   <Layout>
     <SEO title="O nás" />
     <PageHeading>{`O nás`}</PageHeading>
-    <SectionHeading>{`Kdo jsme`}</SectionHeading>
+    <SectionHeading>{`KDO JSME`}</SectionHeading>
     <Paragraph>
       {`Jsme firma, která je na trhu v České republice aktivní již od poloviny roku 1998. Zabýváme se komunikací, tj. zejména překladatelstvím a tlumočnictvím do a z anglického jazyka. S anglickým jazykem aktivně pracujeme, aktivně ho učíme a vlastně pro angličtinu i dýcháme. Našimi dalšími pracovními jazyky jsou angličtina, ruština a slovenština (EN-RU-SK).`}
     </Paragraph>
