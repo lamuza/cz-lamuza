@@ -7,7 +7,7 @@ import React from "react"
 
 export default () => (
   <Layout>
-    <SEO title="O nás" />
+    <SEO title={"O nás"} />
     <PageHeading>{`O nás`}</PageHeading>
     <SectionHeading>{`KDO JSME`}</SectionHeading>
     <Paragraph>

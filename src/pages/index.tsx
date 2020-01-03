@@ -1,14 +1,12 @@
+import { PageHeading } from "components/page-heading"
 import React from "react"
 
 import { Layout } from "components/layout"
 import SEO from "components/seo"
 
-const IndexPage = () => (
+export default () => (
   <Layout>
-    <SEO title="Home" />
-    <h1 className={"text-4xl my-4 px-2 font-bold"}>Jazyky srdcem - Language by heart</h1>
-    <p className={"text-lg px-2 my-2"}>PŘEKLADY – TLUMOČENÍ – VÝUKA</p>
+    <SEO title={"Úvod"} />
+    <PageHeading>{`Vítejte!`}</PageHeading>
   </Layout>
 )
-
-export default IndexPage

@@ -7,7 +7,7 @@ import React from "react"
 
 export default () => (
   <Layout>
-    <SEO title="Služby" />
+    <SEO title={"Služby"} />
     <PageHeading>{`Služby`}</PageHeading>
 
     <SectionHeading>{`SOUDNÍ PŘEKLADY OVĚŘENÉ A NEOVĚŘENÉ DO/Z ANGLICKÉHO JAZYKA`}</SectionHeading>
