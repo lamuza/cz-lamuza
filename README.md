@@ -1,10 +1,13 @@
+- [lamuza.cz](https://lamuza.cz) deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/47475ac0-f7fd-449e-a46a-45878a1a2a40/deploy-status)](https://app.netlify.com/sites/infallible-kilby-60a566/deploys)
+- [lamuza-preview.netlify.com](https://lamuza-preview.netlify.com/) deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/4aee8977-e6ee-49ec-a0bd-c9a126c5e74d/deploy-status)](https://app.netlify.com/sites/lamuza-preview/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
+<p>
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p>
-<h1 align="center">
+<h1>
   Gatsby's default starter
 </h1>
 
