@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
-import React from "react"
+import { Link as GatsbyLink } from "gatsby"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { theme } from "theme"
 
@@ -9,15 +9,18 @@ type Props = {
 }
 
 export const NavigationLink = ({ children, to }: Props) => {
+  const [isActive, setIsActive] = useState(false)
+
   return (
-    <StyledLink
+    <Link
       to={to}
       getProps={({ isCurrent }) => {
-        return isCurrent ? { style: { textDecoration: "underline" } } : {}
+        setIsActive(isCurrent)
+        return {}
       }}
     >
-      {children}
-    </StyledLink>
+      <LinkText isActive={isActive}>{children}</LinkText>
+    </Link>
   )
 }
 
@@ -25,13 +28,17 @@ export const NavigationLink = ({ children, to }: Props) => {
  * Styled components
  */
 
-const StyledLink = styled(Link)`
+const Link = styled(GatsbyLink)`
+  text-decoration: none;
+`
+
+const LinkText = styled("span")<{ isActive: boolean }>`
   position: relative;
   font-family: ${theme.font.family.secondary};
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   color: ${theme.colors.secondary};
-  text-decoration: none;
+  text-decoration: ${props => (props.isActive ? "underline" : "none")};
   text-transform: uppercase;
 
   &:hover {

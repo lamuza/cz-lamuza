@@ -1,6 +1,7 @@
 import { Logo } from "components/logo"
 import { Link } from "gatsby"
 import React from "react"
+import { routes } from "routes"
 import styled from "styled-components"
 import { theme } from "theme"
 import { Navigation } from "../navigation"
@@ -16,13 +17,14 @@ export const Header = (_: Props) => (
   <Container>
     <Wrapper>
       <Link to={"/"}>
-        <Logo height={"40px"} />
+        <Logo height={"20px"} width={"auto"} />
       </Link>
       <Navigation>
-        <NavigationLink to={"/"}>{`Úvod`}</NavigationLink>
-        <NavigationLink to={"/sluzby"}>{`Služby`}</NavigationLink>
-        <NavigationLink to={"/ceny"}>{`Ceny`}</NavigationLink>
-        <NavigationLink to={"/o-nas"}>{`O nás`}</NavigationLink>
+        <NavigationLink to={routes.cs.home}>{`Úvod`}</NavigationLink>
+        <NavigationLink to={routes.cs.services}>{`Služby`}</NavigationLink>
+        <NavigationLink to={routes.cs.pricing}>{`Ceny`}</NavigationLink>
+        <NavigationLink to={routes.cs.about}>{`O nás`}</NavigationLink>
+        <NavigationLink to={routes.cs.contact}>{`Kontakt`}</NavigationLink>
       </Navigation>
     </Wrapper>
   </Container>
@@ -46,7 +48,7 @@ const Container = styled("header")`
 const Wrapper = styled("div")`
   display: grid;
   position: relative;
-  grid-template-columns: 220px auto;
+  grid-template-columns: max-content auto;
   grid-template-rows: 1fr;
   align-items: center;
   width: 100%;
