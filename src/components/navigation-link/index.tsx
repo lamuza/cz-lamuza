@@ -38,11 +38,12 @@ const LinkText = styled("span")<{ isActive: boolean }>`
   font-weight: normal;
   font-size: 16px;
   color: ${theme.colors.secondary};
-  text-decoration: ${props => (props.isActive ? "underline" : "none")};
   text-transform: uppercase;
+  border-bottom: 1px solid ${props => (props.isActive ? theme.colors.secondary : "transparent")};
+  transition: all 250ms ease-in-out;
 
   &:hover {
     color: ${theme.colors.primary};
-    text-decoration: underline;
+    border-bottom: 1px solid ${props => (props.isActive ? theme.colors.primary : "transparent")};
   }
 `
