@@ -77,6 +77,6 @@ const Content = styled("main")`
   max-width: 1024px;
   margin: 0 auto;
   height: 100%;
-  padding: 100px 20px 0 20px;
+  padding: 160px 0 0 0;
   grid-area: content;
 `

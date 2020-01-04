@@ -26,4 +26,9 @@ export const theme = {
       selected: "#1A1423",
     },
   },
+  pageHeading: {
+    color: "#fcfcfc",
+    backgroundColor: "#8c2035",
+    backgroundImage: `linear-gradient(19deg, ${"#8c2035"} 0%, ${"#ada8b6"} 100%)`,
+  },
 }
