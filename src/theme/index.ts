@@ -17,7 +17,8 @@ export const theme = {
     },
   },
   header: {
-    backgroundColor: "#FCFCFC",
+    backgroundColor: "rgb(252,252,252, 0.9)",
+    shadow: "rgb(173,168,182, 0.5)",
   },
   navigationLink: {
     color: {

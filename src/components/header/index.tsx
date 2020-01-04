@@ -58,7 +58,8 @@ const Container = styled("header")<{ isTransparent: boolean }>`
   width: 100%;
   height: ${HEADER_HEIGHT}px;
   background-color: ${props => (props.isTransparent ? "transparent" : theme.header.backgroundColor)};
-  box-shadow: ${props => (props.isTransparent ? "none" : `0 2px 4px ${theme.colors.shadow}`)};
+  box-shadow: ${props => (props.isTransparent ? "none" : `0 2px 4px ${theme.header.shadow}`)};
+  backdrop-filter: blur(8px);
   transition: all 250ms ease-in-out;
 `
 
