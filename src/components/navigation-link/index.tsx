@@ -9,17 +9,17 @@ type Props = {
 }
 
 export const NavigationLink = ({ children, to }: Props) => {
-  const [isActive, setIsActive] = useState(false)
+  const [isSelected, setIsSelected] = useState(false)
 
   return (
     <Link
       to={to}
       getProps={({ isCurrent }) => {
-        setIsActive(isCurrent)
+        setIsSelected(isCurrent)
         return {}
       }}
     >
-      <LinkText isActive={isActive}>{children}</LinkText>
+      <LinkText isSelected={isSelected}>{children}</LinkText>
     </Link>
   )
 }
@@ -32,18 +32,18 @@ const Link = styled(GatsbyLink)`
   text-decoration: none;
 `
 
-const LinkText = styled("span")<{ isActive: boolean }>`
+const LinkText = styled("span")<{ isSelected: boolean }>`
   position: relative;
   font-family: ${theme.font.family.secondary};
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
-  color: ${theme.colors.secondary};
+  color: ${props => (props.isSelected ? theme.navigationLink.color.selected : theme.navigationLink.color.default)};
   text-transform: uppercase;
-  border-bottom: 1px solid ${props => (props.isActive ? theme.colors.secondary : "transparent")};
+  border-bottom: 1px solid ${props => (props.isSelected ? theme.navigationLink.color.selected : "transparent")};
   transition: all 250ms ease-in-out;
 
   &:hover {
-    color: ${theme.colors.primary};
-    border-bottom: 1px solid ${props => (props.isActive ? theme.colors.primary : "transparent")};
+    color: ${theme.navigationLink.color.highlighted};
+    border-bottom: 1px solid ${props => (props.isSelected ? theme.navigationLink.color.highlighted : "transparent")};
   }
 `

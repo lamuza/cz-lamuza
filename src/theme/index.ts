@@ -16,4 +16,14 @@ export const theme = {
       secondary: `'IBM Plex Sans', sans-serif`,
     },
   },
+  header: {
+    backgroundColor: "#FCFCFC",
+  },
+  navigationLink: {
+    color: {
+      default: "#ADA8B6",
+      highlighted: "#8C2035",
+      selected: "#1A1423",
+    },
+  },
 }

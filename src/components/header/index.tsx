@@ -7,8 +7,6 @@ import { theme } from "theme"
 import { Navigation } from "../navigation"
 import { NavigationLink } from "../navigation-link"
 
-export const HEADER_HEIGHT = 80
-
 type Props = {
   children?: never
 }
@@ -34,6 +32,8 @@ export const Header = (_: Props) => (
  * Styled components
  */
 
+export const HEADER_HEIGHT = 80
+
 const Container = styled("header")`
   display: flex;
   position: fixed;
@@ -41,7 +41,7 @@ const Container = styled("header")`
   align-items: center;
   width: 100%;
   height: ${HEADER_HEIGHT}px;
-  background-color: ${theme.colors.white};
+  background-color: ${theme.header.backgroundColor};
   box-shadow: 0 2px 4px ${theme.colors.shadow};
 `
 
