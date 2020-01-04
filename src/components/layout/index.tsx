@@ -10,7 +10,7 @@ import React, { Fragment } from "react"
 
 import { Header } from "components/header"
 import styled from "styled-components"
-import { GlobalStyle } from "./global-style"
+import { GlobalStyle } from "components/global-style"
 import { Footer } from "components/footer"
 
 type Props = {
@@ -77,6 +77,6 @@ const Content = styled("main")`
   max-width: 1024px;
   margin: 0 auto;
   height: 100%;
-  padding: 160px 0 0 0;
+  padding: 160px 20px 0 20px;
   grid-area: content;
 `
