@@ -52,7 +52,7 @@ const Svg = styled("svg")`
   stroke-miterlimit: 2;
 
   path {
-    fill: ${theme.colors.secondary};
+    fill: ${theme.footer.color};
     fill-rule: nonzero;
     transition: fill 250ms ease-in-out;
   }
@@ -65,10 +65,4 @@ const AnchorLink = styled("a")`
   align-items: center;
   width: 24px;
   height: 24px;
-
-  &:hover ${Svg} {
-    path {
-      fill: ${theme.colors.facebook};
-    }
-  }
 `

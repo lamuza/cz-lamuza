@@ -1,5 +1,3 @@
-import { Logo } from "components/logo"
-import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { theme } from "theme"
@@ -13,9 +11,6 @@ export const Copyright = (_: Props) => {
 
   return (
     <Container>
-      <Link to={"/"}>
-        <Logo height={"16px"} width={"auto"} />
-      </Link>
       <Motto>{`překlady | tlumočení | výuka`}</Motto>
       <CopyrightText>
         {`© ${currentYear} Lamuza | `}
@@ -45,20 +40,20 @@ const Container = styled("div")`
 const Motto = styled("span")`
   position: relative;
   font-size: 14px;
-  color: ${theme.colors.secondary};
+  color: ${theme.footer.color};
   margin-top: 5px;
 `
 
 const CopyrightText = styled("span")`
   position: relative;
   font-size: 12px;
-  color: ${theme.colors.primary};
+  color: ${theme.footer.color};
   margin-top: 10px;
 `
 
 const AnchorLink = styled("a")`
   position: relative;
-  color: ${theme.colors.primary};
+  color: ${theme.footer.color};
   text-decoration: none;
 
   &:hover {

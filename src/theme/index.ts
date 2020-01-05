@@ -4,8 +4,6 @@ const colors = {
   tertiary: "#BFA5A6",
   black: "#000000",
   white: "#FFFFFF",
-  facebook: "#3b5998",
-  shadow: "rgba(87, 65, 66, 0.25)",
 }
 
 export const theme = {
@@ -17,8 +15,8 @@ export const theme = {
     },
   },
   header: {
-    backgroundColor: "rgb(252,252,252, 0.9)",
-    shadow: "rgb(173,168,182, 0.5)",
+    backgroundColor: "rgba(252,252,252, 0.9)",
+    shadow: "rgba(173,168,182, 0.5)",
   },
   navigationLink: {
     color: {
@@ -28,8 +26,13 @@ export const theme = {
     },
   },
   pageHeading: {
-    color: "#fcfcfc",
-    backgroundColor: "#8c2035",
-    backgroundImage: `linear-gradient(19deg, ${"#8c2035"} 0%, ${"#ada8b6"} 100%)`,
+    color: "#FCFCFC",
+    backgroundColor: "#8C2035",
+    backgroundImage: `linear-gradient(19deg, ${"#8C2035"} 0%, ${"#ADA8B6"} 100%)`,
+  },
+  footer: {
+    color: "#FCFCFC",
+    backgroundColor: "#1A1423",
+    backgroundImage: `linear-gradient(109deg, ${"#ADA8B6"} 0%, ${"#FCFCFC"} 100%)`,
   },
 }
