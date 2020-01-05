@@ -11,7 +11,6 @@ export const Copyright = (_: Props) => {
 
   return (
     <Container>
-      <Motto>{`překlady | tlumočení | výuka`}</Motto>
       <CopyrightText>
         {`© ${currentYear} Lamuza | `}
         <AnchorLink
@@ -33,22 +32,13 @@ const Container = styled("div")`
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: flex-start;
   grid-area: copyright;
-`
-
-const Motto = styled("span")`
-  position: relative;
-  font-size: 14px;
-  color: ${theme.footer.color};
-  margin-top: 5px;
 `
 
 const CopyrightText = styled("span")`
   position: relative;
   font-size: 12px;
   color: ${theme.footer.color};
-  margin-top: 10px;
 `
 
 const AnchorLink = styled("a")`

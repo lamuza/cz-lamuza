@@ -26,9 +26,10 @@ const Container = styled("footer")`
   position: relative;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 80px 0 40px 0;
   width: 100%;
   background-color: ${theme.footer.backgroundColor};
+  background-image: ${theme.footer.backgroundImage};
 `
 
 const Wrapper = styled("div")`
@@ -37,6 +38,7 @@ const Wrapper = styled("div")`
   grid-template-columns: max-content auto max-content;
   grid-template-rows: auto;
   grid-template-areas: "copyright . social-links";
+  align-items: end;
   width: 100%;
   max-width: 1024px;
   padding: 0 40px;

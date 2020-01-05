@@ -31,8 +31,8 @@ export const theme = {
     backgroundImage: `linear-gradient(19deg, ${"#8C2035"} 0%, ${"#ADA8B6"} 100%)`,
   },
   footer: {
-    color: "#FCFCFC",
-    backgroundColor: "#1A1423",
-    backgroundImage: `linear-gradient(109deg, ${"#ADA8B6"} 0%, ${"#FCFCFC"} 100%)`,
+    color: "#474350",
+    backgroundColor: "#ADA8B6",
+    backgroundImage: `linear-gradient(0deg, ${"#ADA8B6"} 0%, ${"#FCFCFC"} 100%)`,
   },
 }
